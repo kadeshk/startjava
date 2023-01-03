@@ -96,30 +96,24 @@ public class VariablesTheme {
 
         System.out.println("\n 7.Вывод в консоль ASCII-арт Дюка");
         char char92 = 92;
-        String str01 = ("    /" + char92);
-        String str02 = ("\n   /  " + char92);
-        String str03 = ("\n  /_( )" + char92);
-        String str04 = ("\n /      " + char92);
-        String str05 = ("\n/____/" + char92 + "__" + char92);
-        System.out.println(str01 + str02 + str03 + str04 + str05);
+        String str = ("    /" + char92 + "\n   /  " + char92 + "\n  /_( )" + char92 + "\n /      " + char92 + "\n/____/" + char92 + "__" + char92);
+        System.out.println(str);
 
         System.out.println("\n 8.Вывод количества сотен, десятков и единиц числа");
         int num = 123;
-        int hundred = num / 100;
+        int hundreds = num / 100;
         int tens = num / 10;
-        int units = num % 10;
-        int sum = hundred + tens + units;
-        int multiplication = hundred * tens * units;
-        System.out.println("Число " + num + " содержит: " + hundred + " сотню " + tens + " десятков " + units + " единицы");
+        int ones = num % 10;
+        int sum = hundreds + tens + ones;
+        int multiplication = hundreds * tens * ones;
+        System.out.println("Число " + num + " содержит: " + hundreds + " сотню " + tens + " десятков " + ones + " единицы");
         System.out.println("Сумма его цифр = " + sum + ", Произведение = " + multiplication);
      
-
-
         System.out.println("\n 9.Вывод времени");
         int time = 86399;
         int hours = time / 60 / 60;
         int min = time / 60 % 100;
-        int sec = time % 100;
+        int sec = time % 60;
 
         System.out.println(hours + ":" + min + ":" + sec);
     }
