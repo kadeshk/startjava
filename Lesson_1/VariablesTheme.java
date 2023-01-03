@@ -109,9 +109,9 @@ public class VariablesTheme {
         int tens = num / 10;
         int units = num % 10;
         int sum = hundred + tens + units;
-        int prod = hundred * tens * units;
+        int multiplication = hundred * tens * units;
         System.out.println("Число " + num + " содержит: " + hundred + " сотню " + tens + " десятков " + units + " единицы");
-        System.out.println("Сумма его цифр = " + sum + ", Произведение = " + prod);
+        System.out.println("Сумма его цифр = " + sum + ", Произведение = " + multiplication);
      
 
 
