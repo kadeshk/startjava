@@ -98,18 +98,33 @@ public class IfElseStatementTheme {
 
         System.out.println("\n 7.   Определение оценки по предметам");
 
-        int history = 59;
-        int programming = 91;
-        char grade;
+        int historyPoints = 59;
+        int programmingPoints = 91;
+        string historyName = "История - ";
+        string programmingName = "Программирование - ";
+        string averagePoint = "Средний балл";
+        string averagePercentage = "Средний %";
+        char historyGrade;
+        char programmingGrade;
 
-        if (testcore > 91) {
-            grade = '5';
-        } else if (testcore > 73) {
-            grade = '4';
-        } else if (testcore > 60) {
-            grade = '3';
-        } else if (testcore <= 60) {
-            grade = '2';
+        if (historyPoints > 91) {
+            historyGrade = '5';
+        } else if (historyPoints > 73) {
+            historyGrade = '4';
+        } else if (historyPoints > 60) {
+            historyGrade = '3';
+        } else if (historyPoints <= 60) {
+            historyGrade = '2';
+        }
+
+                if (historyPoints > 91) {
+            historyGrade = '5';
+        } else if (historyPoints > 73) {
+            historyGrade = '4';
+        } else if (historyPoints > 60) {
+            historyGrade = '3';
+        } else if (historyPoints <= 60) {
+            historyGrade = '2';
         }
         System.out.println("Grade = " + grade);
 
