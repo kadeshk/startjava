@@ -47,7 +47,10 @@ public class VariablesTheme {
         int intMax = 2147483647;
         long longMax = 922337203685477580l;
  
-        System.out.println("Первоначальное значение \n" + byteMax + "\n" + shortMax + "\n" + intMax + "\n" + longMax + "\n Значение после инкремента \n" + byteMax++ + "\n" + shortMax++ + "\n" + intMax++ + "\n" + longMax++ + "\n Значение после декремента \n" + byteMax-- + "\n" + shortMax-- + "\n" + intMax-- + "\n" + longMax--);
+        System.out.println("Первоначальное значение \n" + byteMax + "\n" + shortMax + "\n" + 
+        intMax + "\n" + longMax + "\n Значение после инкремента \n" + (byteMax++) + "\n" + 
+        (shortMax++) + "\n" + (intMax++) + "\n" + (longMax++) + "\n Значение после декремента \n" + 
+        byteMax-- + "\n" + shortMax-- + "\n" + intMax-- + "\n" + longMax--);
 
         System.out.println("\n 5.Перестановка значений переменных");
         int x = 2;
@@ -71,27 +74,27 @@ public class VariablesTheme {
         System.out.println("x = " + x + ", y = " + y + ".");
 
         System.out.println("\n 6.Вывод символов и их кодов");
-
-        String code35 = "35 = ";
-        String code38 = "38 = ";
-        String code64 = "64 = ";
-        String code94 = "94 = ";
-        String code95 = "95 = ";
+        
         char char35 = '#';
         char char38 = '&';
         char char64 = '@';
         char char94 = '^';
         char char95 = '_';
 
-        System.out.println(code35 + char35 + "\n" + code38 + char38 + "\n" + code64 + char64 + "\n" + code94 + char94 + "\n" + code95 + char95);
+        System.out.println((int) char35 + " = " + char35 + "\n" + (int) char38 + " = " + 
+        char38 + "\n" + (int) char64 + " = "  + char64 + "\n" + (int) char94 + " = " + char94 + 
+        "\n" + (int) char95 + " = " + char95);
 
         System.out.println("\n 7.Вывод в консоль ASCII-арт Дюка");
-        char char1 = '/';
-        char char2 = '\\';
-        char char3 = '_';
-        char char4 = '(';
-        char char5 = ')';
-        String str = ("    " + char1 + char2 + "\n   "+ char1 +"  " + char2 + "\n  " + char1 + char3 + char4 + " " + char5 + char2 + "\n" +" " + char1 + "      " + char2 + "\n" + char1 + char3 +  char3 + char3 + char3 + char1 + char2 + char3 + char3 + char2);
+        char slash = '/';
+        char backslash = '\\';
+        char underscore = '_';
+        char parenthesisLeft = '(';
+        char parenthesisRight = ')';
+        String str = ("    " + slash + backslash + "\n   "+ slash +"  " + backslash + 
+        "\n  " + slash + underscore + parenthesisLeft + " " + parenthesisRight + backslash + 
+        "\n" +" " + slash + "      " + backslash + "\n" + slash + underscore +  underscore + 
+        underscore + underscore + slash + backslash + underscore + underscore + backslash);
         System.out.println(str);
 
         System.out.println("\n 8.Вывод количества сотен, десятков и единиц числа");
@@ -101,7 +104,8 @@ public class VariablesTheme {
         int ones = num % 10;
         int sum = hundreds + tens + ones;
         int multiplication = hundreds * tens * ones;
-        System.out.println("Число " + num + " содержит: " + hundreds + " сотню " + tens + " десятков " + ones + " единицы");
+        System.out.println("Число " + num + " содержит: " + hundreds + " сотню " + tens + 
+        " десятков " + ones + " единицы");
         System.out.println("Сумма его цифр = " + sum + ", Произведение = " + multiplication);
      
         System.out.println("\n 9.Вывод времени");
@@ -111,6 +115,5 @@ public class VariablesTheme {
         int sec = time % 60;
 
         System.out.println(hours + ":" + min + ":" + sec);
-
     }
 }
