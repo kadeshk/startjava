@@ -13,7 +13,7 @@ public class VariablesTheme {
         long hddSize = 1;
         char series = 'W';
         double weight = 10.23;
-        boolean licenseStatus = true;
+        boolean islicenseStatus = true;
 
         System.out.println("Количество ядер: " + coreNum);
         System.out.println("Частота процессора:  " + ghzNum + " Гц");
@@ -23,7 +23,7 @@ public class VariablesTheme {
         System.out.println("Общий объем накопителей HDD: " + hddSize + " ТБ");
         System.out.println("Серия: " + series);
         System.out.println("Вес: " + weight + " кг");
-        System.out.println("Наличие лицензионной версии: " + licenseStatus);
+        System.out.println("Наличие лицензионной версии: " + islicenseStatus);
 
         System.out.println("\n 2.Расчет стоимости товара со скидкой");
         int penPrice = 100;
@@ -48,9 +48,9 @@ public class VariablesTheme {
         long longMax = 922337203685477580l;
  
         System.out.println("Первоначальное значение \n" + byteMax + "\n" + shortMax + "\n" + 
-        intMax + "\n" + longMax + "\n Значение после инкремента \n" + (byteMax++) + "\n" + 
-        (shortMax++) + "\n" + (intMax++) + "\n" + (longMax++) + "\n Значение после декремента \n" + 
-        byteMax-- + "\n" + shortMax-- + "\n" + intMax-- + "\n" + longMax--);
+        intMax + "\n" + longMax + "\n Значение после инкремента \n" + (++byteMax) + "\n" + 
+        (++shortMax) + "\n" + (++intMax) + "\n" + (++longMax) + "\n Значение после декремента \n" + 
+        (--byteMax) + "\n" + (--shortMax) + "\n" + (--intMax) + "\n" + (--longMax));
 
         System.out.println("\n 5.Перестановка значений переменных");
         int x = 2;
