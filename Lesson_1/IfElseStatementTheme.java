@@ -1,6 +1,8 @@
 public class IfElseStatementTheme {   
 
     public static void main(String[] args) {
+        System.out.println("Задачки на тему Ветвление: if-else");
+        System.out.println("Выполнил Александр sb2024@yandex.ru");
         System.out.println("1. Перевод псевдокода на язык Java (это название задачи)");
         int age = 30;
 
@@ -61,7 +63,7 @@ public class IfElseStatementTheme {
 
         System.out.println("\n 4.Поиск одинаковых цифр в числах");
         int n = 321;
-        int m = 456;
+        int m = 426;
         int n1 = n / 100;
         int n2 = n / 10 % 10;
         int n3 = n % 100;
@@ -69,63 +71,22 @@ public class IfElseStatementTheme {
         int m2 = m / 10 % 10;
         int m3 = m % 100;
 
-        if (n1 = m1) { 
-            else if (n2 = m2) {
-            else if (n3 = m3) {
-
-            }
-
-            }
+        if (n1 == m1 ) { 
+        System.out.println(n1 + " одинаковое число 1-ого разряда");
+        } else if(n2 == m2) {
+        System.out.println(n2 + " одинаковое число 2-ого разряда");
+        } else if(n3 == m3) {
+        System.out.println(n3 + " одинаковое число 3-его разряда");
+        } else {
+        System.out.println("\n Одинаковых цифр нет");
         }
-        System.out.println("Исходные числа \n n = " + n + "\n m = " + m);
-        System.out.println("\n II. Одинаковые в них цифры \n ");
-        System.out.println("\n III. Номера разрядов");
-        }
+                
+        System.out.println("\n 8.  Расчет прибыли за год");
+        int officeRentPrice = 5000;
+        int productPrice = 13000;
+        int costPrice = 9000;
 
-        System.out.println("\n 5.Определение символа по его коду");
-        char p = '\u0057';
-        System.out.println("p = " + p);
-
-
-        System.out.println("\n 6.Подсчет суммы вклада и начисленных банком %");
-        int bank = 300000;
-        if (bank < 100000) {
-            (bank*0.05 + bank);
-        } else if (bank > 100000 ) {
-
-        }
-        System.out.println("\n сумма вклада = " + bank + "\n II. начисленный % = " + + "\n итоговая сумма с % = " + );
-
-        System.out.println("\n 7.   Определение оценки по предметам");
-
-        int historyPoints = 59;
-        int programmingPoints = 91;
-        string historyName = "История - ";
-        string programmingName = "Программирование - ";
-        string averagePoint = "Средний балл";
-        string averagePercentage = "Средний %";
-        char historyGrade;
-        char programmingGrade;
-
-        if (historyPoints > 91) {
-            historyGrade = '5';
-        } else if (historyPoints > 73) {
-            historyGrade = '4';
-        } else if (historyPoints > 60) {
-            historyGrade = '3';
-        } else if (historyPoints <= 60) {
-            historyGrade = '2';
-        }
-
-                if (historyPoints > 91) {
-            historyGrade = '5';
-        } else if (historyPoints > 73) {
-            historyGrade = '4';
-        } else if (historyPoints > 60) {
-            historyGrade = '3';
-        } else if (historyPoints <= 60) {
-            historyGrade = '2';
-        }
-        System.out.println("Grade = " + grade);
-
+        int annualProfit = ((productPrice - costPrice) - officeRentPrice) * 12;  
+        System.out.println("i.   прибыль за год:" + annualProfit);
+    }
 }
