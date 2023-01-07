@@ -1,4 +1,4 @@
-        public class IfElseStatementTheme {   
+public class IfElseStatementTheme {   
 
     public static void main(String[] args) {
         System.out.println("1. Перевод псевдокода на язык Java (это название задачи)");
@@ -84,18 +84,55 @@
         int percentLess100000 = 5;
         int percentLess300000 = 7;
         int percentMore300000 = 10;
+        double percentLess100000TotalSum = 1.05;
+        double percentLess300000TotalSum = 1.07;
+        double percentMore300000TotalSum = 1.1;
+
         if (deposit < 100000) {
         System.out.println("сумма вклада = " + deposit + "\n II. начисленный % = " + 
-                percentLess100000 + "\n итоговая сумма с % = " + (deposit * percentLess100000 ));
+                percentLess100000 + "\n итоговая сумма с % = " + 
+                (deposit * percentLess100000TotalSum));
         } else if (deposit > 100000  && deposit <= 300000) {
         System.out.println("сумма вклада = " + deposit + "\n II. начисленный % = " + 
-                percentLess300000 + "\n итоговая сумма с % = " + percentLess300000 + 
-                (deposit * percentLess300000 ));
+                percentLess300000 + "\n итоговая сумма с % = " + 
+                (deposit * percentLess300000TotalSum));
         } else if (deposit > 300000) {
         System.out.println("сумма вклада = " + deposit + "\n II. начисленный % = " + 
-                percentMore300000 + "\n итоговая сумма с % = " + percentMore300000 + 
-                (deposit * percentMore300000 ));
+                percentMore300000 + "\n итоговая сумма с % = " + 
+                (deposit * percentMore300000TotalSum));
         }
+
+                System.out.println("\n 7.   Определение оценки по предметам");
+        int historyPoints = 59;
+        int programmingPoints = 91;
+        int historyGrade;
+        int programmingGrade;
+
+        if (historyPoints > 91) {
+            historyGrade = 5;
+        } else if (historyPoints > 73) {
+            historyGrade = 4;
+        } else if (historyPoints > 60) {
+            historyGrade = 3;
+        } else {
+            historyGrade = 2;
+        }
+
+        if (programmingPoints > 91) {
+            programmingGrade = 5;
+        } else if (programmingPoints > 73) {
+            programmingGrade = 4;
+        } else if (programmingPoints > 60) {
+            programmingGrade = 3;
+        } else {
+            programmingGrade = 2;
+        }
+
+        System.out.println("История - " + historyGrade + "\n" + "Программирование - " +
+                programmingGrade + "\n" + "Средний балл - " + 
+                ((historyGrade + programmingGrade) / 2) + "\n" + 
+                "Средний % - " + ((historyPoints + programmingPoints) / 2));
+
 
                 System.out.println("\n 8.  Расчет прибыли за год");
         int officeRentPrice = 5000;
@@ -106,3 +143,5 @@
         System.out.println("i.   прибыль за год:" + annualProfit);
     }
 }
+
+
