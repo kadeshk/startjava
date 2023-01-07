@@ -1,8 +1,6 @@
-public class IfElseStatementTheme {   
+        public class IfElseStatementTheme {   
 
     public static void main(String[] args) {
-        System.out.println("Задачки на тему Ветвление: if-else");
-        System.out.println("Выполнил Александр sb2024@yandex.ru");
         System.out.println("1. Перевод псевдокода на язык Java (это название задачи)");
         int age = 30;
 
@@ -80,8 +78,26 @@ public class IfElseStatementTheme {
         } else {
         System.out.println("\n Одинаковых цифр нет");
         }
-                
-        System.out.println("\n 8.  Расчет прибыли за год");
+
+        System.out.println("\n 6.Подсчет суммы вклада и начисленных банком %");
+        int deposit = 300000;
+        int percentLess100000 = 5;
+        int percentLess300000 = 7;
+        int percentMore300000 = 10;
+        if (deposit < 100000) {
+        System.out.println("сумма вклада = " + deposit + "\n II. начисленный % = " + 
+                percentLess100000 + "\n итоговая сумма с % = " + (deposit * percentLess100000 ));
+        } else if (deposit > 100000  && deposit <= 300000) {
+        System.out.println("сумма вклада = " + deposit + "\n II. начисленный % = " + 
+                percentLess300000 + "\n итоговая сумма с % = " + percentLess300000 + 
+                (deposit * percentLess300000 ));
+        } else if (deposit > 300000) {
+        System.out.println("сумма вклада = " + deposit + "\n II. начисленный % = " + 
+                percentMore300000 + "\n итоговая сумма с % = " + percentMore300000 + 
+                (deposit * percentMore300000 ));
+        }
+
+                System.out.println("\n 8.  Расчет прибыли за год");
         int officeRentPrice = 5000;
         int productPrice = 13000;
         int costPrice = 9000;
