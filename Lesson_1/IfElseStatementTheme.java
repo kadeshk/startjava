@@ -79,7 +79,7 @@ public class IfElseStatementTheme {
         System.out.println("\n Одинаковых цифр нет");
         }
 
-                System.out.println("\n 5.Определение символа по его коду");
+        System.out.println("\n 5.Определение символа по его коду");
         char p = '\u0057';
         if (p >= '0' && p <= '9') {
         System.out.println(p + " является числом");
@@ -113,7 +113,7 @@ public class IfElseStatementTheme {
                 (deposit * percentMore300000TotalSum));
         }
 
-                System.out.println("\n 7.   Определение оценки по предметам");
+        System.out.println("\n 7.   Определение оценки по предметам");
         int historyPoints = 59;
         int programmingPoints = 91;
         int historyGrade;
@@ -145,13 +145,44 @@ public class IfElseStatementTheme {
                 "Средний % - " + ((historyPoints + programmingPoints) / 2));
 
 
-                System.out.println("\n 8.  Расчет прибыли за год");
+        System.out.println("\n 8.  Расчет прибыли за год");
         int officeRentPrice = 5000;
         int productPrice = 13000;
         int costPrice = 9000;
 
         int annualProfit = ((productPrice - costPrice) - officeRentPrice) * 12;  
         System.out.println("i.   прибыль за год:" + annualProfit);
+
+        System.out.println("\n 9.   Подсчет количества банкнот");
+        int needfulmoney = 567;
+        int needfulhundreds = needfulmoney / 100;
+        int needfultens = needfulmoney / 10 % 10;
+        int needfulones = needfulmoney % 10;
+        int availablehundreds = 10;
+        int availabletens = 5;
+        int availableones = 50;
+        int usinghundreds;
+        int usingtens;
+        int usingones;
+
+        if (needfulhundreds <= availablehundreds && needfultens <= availabletens && 
+                    needfulones <= availableones) {
+        usinghundreds = needfulhundreds;
+        usingtens = needfultens;
+        usingones = needfulones;
+        } else {
+        usinghundreds = needfulhundreds;
+        usingtens = availabletens;
+        usingones = needfulones + ((needfultens - availabletens) * 10);
+        }
+
+        System.out.println ("i. номиналы банкнот: \n i. 10 банкнот номиналом 100" + 
+                "\n ii. 5 банкнот номиналом 10 \n iii.    50 банкнот номиналом 1" + 
+                "ii.    требуемое их количество: \n " + needfulhundreds + 
+                " банкнот номиналом 100 \n" + needfultens + " банкнот номиналом 10 \n" + 
+                needfulones + " банкнот номиналом 1 \n" + "iii. выдаваемая сумма: \n" + 
+                + usinghundreds + " банкнот номиналом 100 \n" + usingtens + 
+                " банкнот номиналом 10 \n" + usingones + " банкнот номиналом 1");
     }
 }
 
