@@ -79,6 +79,17 @@ public class IfElseStatementTheme {
         System.out.println("\n Одинаковых цифр нет");
         }
 
+                System.out.println("\n 5.Определение символа по его коду");
+        char p = '\u0057';
+        if (p >= '0' && p <= '9') {
+        System.out.println(p + " является числом");
+        } else if (p >= 'a' && p <= 'z') {
+        System.out.println(p + " не является заглавной буквой");
+        } else if (p >= 'A' && p <= 'Z') {
+        System.out.println(p + " является заглавной буквой");
+        } else 
+        System.out.println(p + " не является ни заглавной буквой, ни числом");
+
         System.out.println("\n 6.Подсчет суммы вклада и начисленных банком %");
         int deposit = 300000;
         int percentLess100000 = 5;
