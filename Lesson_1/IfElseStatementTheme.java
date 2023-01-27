@@ -5,7 +5,7 @@ public class IfElseStatementTheme {
         int age = 30;
         boolean maleSex = true;
         double height = 2.5;
-        char letterName1;
+        char capitalLetter;
 
         if (age > 20) {
             System.out.println("Вам больше 20 лет");
@@ -25,95 +25,109 @@ public class IfElseStatementTheme {
             System.out.println("Ваш рост меньше 180 м ");
         }
 
-        letterName1 = "Name".charAt(0);
-        if (letterName1 == 'M') {
+        capitalLetter = "Name".charAt(0);
+        if (capitalLetter == 'M') {
             System.out.println("Ваше имя начинается с М");
-        } else if (letterName1 == 'I') {
+        } else if (capitalLetter == 'I') {
             System.out.println("Ваше имя начинается с I");
         } else {
             System.out.println("Ваше имя начинается не с M и I");
         }  
 
         System.out.println("\n 2.Поиск max и min числа");
-        int x = 1;
-        int y = 5;
+        int num1 = 1;
+        int num2 = 5;
 
-        if (x == y) {
-            System.out.println("x и y равны");
-        } else if (x > y) {
-            System.out.println("max является x = " + x + ", min является y = " + y );
+        if (num1 == num2) {
+            System.out.println("num1 и num2 равны");
+        } else if (num1 > num2) {
+            System.out.println("max является num1 = " + num1 + ", min является num2 = " + num2);
         } else {
-            System.out.println("max является y = " + y + ", min является x = " + x );
+            System.out.println("max является num2 = " + num2 + ", min является num1 = " + num1 );
         }
 
         System.out.println("\n 3.Проверка числа");
-        int c = 0;
+        int checkingNum = -1;
 
-        System.out.println("\n Исходное число:" + c);
-        if (c == 0) {
-            System.out.println("число с равно нулю");
-        } else if ((c%2)==0) {
-            System.out.println("число c является чётным");
-        } else if (c > 0) {
-            System.out.println("число c является положительным");
-        } else {
-            System.out.println("число c является нечётным и отрицательным");
+        if (checkingNum == 0) {
+            System.out.println("число " + checkingNum + " равно нулю");
+        } else if (checkingNum % 2 == 0 && checkingNum > 0) {
+            System.out.println("число " + checkingNum +" является чётным и положительным");
+        } else if ((checkingNum % 2) == 0 && checkingNum < 0) {
+            System.out.println("число " + checkingNum + " является чётным и отрицательным");
+        } else if (checkingNum < 0) {
+            System.out.println("число " + checkingNum + " является нечётным и отрицательным");
+        } else if (checkingNum > 0) {
+            System.out.println("число " + checkingNum + " является нечётным и положительным");
         }
 
         System.out.println("\n 4.Поиск одинаковых цифр в числах");
-        int n = 321;
-        int m = 426;
-        int n1 = n / 100;
-        int n2 = n / 10 % 10;
-        int n3 = n % 100;
-        int m1 = m / 100;
-        int m2 = m / 10 % 10;
-        int m3 = m % 100;
+        int sameNum1 = 380;
+        int sameNum2 = 180;
+        int sameNum1Letter1 = sameNum1 / 100;
+        int sameNum1Letter2 = sameNum1 / 10 % 10;
+        int sameNum1Letter3 = sameNum1 % 10;
+        int sameNum2Letter1 = sameNum2 / 100;
+        int sameNum2Letter2 = sameNum2 / 10 % 10;
+        int sameNum2Letter3 = sameNum2 % 10;
 
-        if (n1 == m1) { 
-            System.out.println(n1 + " одинаковое число 1-ого разряда");
-        } else if (n2 == m2) {
-            System.out.println(n2 + " одинаковое число 2-ого разряда");
-        } else if (n3 == m3) {
-            System.out.println(n3 + " одинаковое число 3-его разряда");
-        } else {
-            System.out.println("\n Одинаковых цифр нет");
+        if (sameNum1Letter1 == sameNum2Letter1 && sameNum1Letter2 == sameNum2Letter2 && 
+                    sameNum1Letter3 == sameNum2Letter3) { 
+            System.out.println("i.  исходные числа:\n" + sameNum1 + "\n" + sameNum2 +
+                    "\n ii. одинаковые в них цифры \n" + sameNum1Letter1 + "\n" + sameNum1Letter2 +
+                    "\n" + sameNum1Letter3 + "\n iii. номера разрядов \n" + "1,2,3");
+        } else if (sameNum1Letter1 == sameNum2Letter1 && sameNum1Letter2 == sameNum2Letter2) {
+            System.out.println("i.  исходные числа:\n" + sameNum1 + "\n" + sameNum2 +
+                    "\n ii. одинаковые в них цифры \n" + sameNum1Letter1 + "\n" + sameNum1Letter2 +
+                    "iii. номера разрядов \n" + "1,2");
+        } else if (sameNum1Letter1 == sameNum2Letter1 && sameNum1Letter3 == sameNum2Letter3) {
+            System.out.println("i.  исходные числа:\n" + sameNum1 + "\n" + sameNum2 +
+                    "\n ii. одинаковые в них цифры \n" + sameNum1Letter1 + "\n" + sameNum1Letter3 +
+                    "\n iii. номера разрядов \n" + "1,3");
+        } else if (sameNum1Letter2 == sameNum2Letter2 && sameNum1Letter3 == sameNum2Letter3) {
+            System.out.println("i.  исходные числа:\n" + sameNum1 + "\n" + sameNum2 +
+                    "\n ii. одинаковые в них цифры \n" + sameNum1Letter2 + "\n" + sameNum1Letter3 +
+                    "\n iii. номера разрядов \n" + "2,3");
+        } else if (sameNum1Letter1 == sameNum2Letter1) {
+            System.out.println("i.  исходные числа:\n" + sameNum1 + "\n" + sameNum2 +
+                    "\n ii. одинаковые в них цифры \n" + sameNum1Letter1+
+                    "\n iii. номера разрядов \n" + "1");
+        } else if (sameNum1Letter2 == sameNum2Letter2) {
+            System.out.println("i.  исходные числа:\n" + sameNum1 + "\n" + sameNum2 +
+                    "\n ii. одинаковые в них цифры \n" + sameNum1Letter2 +
+                    "iii. номера разрядов \n" + "2");
+        } else if (sameNum1Letter3 == sameNum2Letter3) {
+            System.out.println("i.  исходные числа:\n" + sameNum1 + "\n" + sameNum2 +
+                    "\n ii. одинаковые в них цифры \n" + sameNum1Letter3+
+                    "\n iii. номера разрядов \n" + "3");
         }
 
         System.out.println("\n 5.Определение символа по его коду");
-        char p = '\u0057';
+        char definingSymbol = '\u0057';
 
-        if (p >= '0' && p <= '9') {
-        System.out.println(p + " является числом");
-        } else if (p >= 'a' && p <= 'z') {
-        System.out.println(p + " не является заглавной буквой");
-        } else if (p >= 'A' && p <= 'Z') {
-        System.out.println(p + " является заглавной буквой");
+        if (definingSymbol >= '0' && definingSymbol <= '9') {
+        System.out.println(definingSymbol + " является числом");
+        } else if (definingSymbol >= 'a' && definingSymbol <= 'z') {
+        System.out.println(definingSymbol + " является маленькой буквой");
+        } else if (definingSymbol >= 'A' && definingSymbol <= 'Z') {
+        System.out.println(definingSymbol + " является заглавной буквой");
         } else 
-        System.out.println(p + " не является ни заглавной буквой, ни числом");
+        System.out.println(definingSymbol + " не является ни буквой, ни числом");
 
         System.out.println("\n 6.Подсчет суммы вклада и начисленных банком %");
         int deposit = 300000;
-        int percentLess100000 = 5;
-        int percentLess300000 = 7;
-        int percentMore300000 = 10;
-        double percentLess100000TotalSum = 1.05;
-        double percentLess300000TotalSum = 1.07;
-        double percentMore300000TotalSum = 1.1;
+        int percent;
 
         if (deposit < 100000) {
-            System.out.println("сумма вклада = " + deposit + "\n II. начисленный % = " + 
-                percentLess100000 + "\n итоговая сумма с % = " + 
-                (deposit * percentLess100000TotalSum));
+        percent = 5;
         } else if (deposit > 100000  && deposit <= 300000) {
-            System.out.println("сумма вклада = " + deposit + "\n II. начисленный % = " + 
-                percentLess300000 + "\n итоговая сумма с % = " + 
-                (deposit * percentLess300000TotalSum));
-        } else if (deposit > 300000) {
-            System.out.println("сумма вклада = " + deposit + "\n II. начисленный % = " + 
-                percentMore300000 + "\n итоговая сумма с % = " + 
-                (deposit * percentMore300000TotalSum));
+        percent = 7;
+        } else {
+        percent = 10;
         }
+
+        System.out.println("I. сумма вклада = " + deposit + "\nII. начисленный % = " + percent +
+                " % \nIII. итоговая сумма с % = " + (deposit * (percent * 0.01 + 1)));
 
         System.out.println("\n 7.   Определение оценки по предметам");
         int historyPoints = 59;
