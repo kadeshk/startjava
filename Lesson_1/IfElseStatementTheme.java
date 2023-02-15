@@ -1,11 +1,11 @@
 public class IfElseStatementTheme {   
 
     public static void main(String[] args) {
-        System.out.println("1. Перевод псевдокода на язык Java (это название задачи)");
+        System.out.println("1. Перевод псевдокода на язык Java");
         int age = 30;
         boolean maleSex = true;
         double height = 2.5;
-        char capitalLetter;
+        char capitalLetter = "Name".charAt(0);
 
         if (age > 20) {
             System.out.println("Вам больше 20 лет");
@@ -47,19 +47,23 @@ public class IfElseStatementTheme {
         }
 
         System.out.println("\n 3.Проверка числа");
-        int checkingNum = -1;
+        int num = -78;
 
-        if (checkingNum == 0) {
-            System.out.println("число " + checkingNum + " равно нулю");
-        } else if (checkingNum % 2 == 0 && checkingNum > 0) {
-            System.out.println("число " + checkingNum +" является чётным и положительным");
-        } else if ((checkingNum % 2) == 0 && checkingNum < 0) {
-            System.out.println("число " + checkingNum + " является чётным и отрицательным");
-        } else if (checkingNum < 0) {
-            System.out.println("число " + checkingNum + " является нечётным и отрицательным");
-        } else if (checkingNum > 0) {
-            System.out.println("число " + checkingNum + " является нечётным и положительным");
+        System.out.println("Исходное число: " + num);
+        if (num == 0) {
+            System.out.println(" равно нулю");
+        } else if (num % 2 == 0) {
+                    if (num < 0)
+            System.out.println(num + " является чётным и отрицательным");
+        } else {
+            System.out.println(num + " является чётным и положительным");
+        } if (num % 2 != 0) {
+                    if (num < 0) {
+            System.out.println(num + " является чётным и отрицательным");
+        } else {
+            System.out.println(num + " является чётным и положительным");
         }
+    }
 
         System.out.println("\n 4.Поиск одинаковых цифр в числах");
         int sameNum1 = 380;
@@ -71,59 +75,48 @@ public class IfElseStatementTheme {
         int sameNum2Letter2 = sameNum2 / 10 % 10;
         int sameNum2Letter3 = sameNum2 % 10;
 
-        if (sameNum1Letter1 == sameNum2Letter1 && sameNum1Letter2 == sameNum2Letter2 && 
-                    sameNum1Letter3 == sameNum2Letter3) { 
-            System.out.println("i.  исходные числа:\n" + sameNum1 + "\n" + sameNum2 +
-                    "\n ii. одинаковые в них цифры \n" + sameNum1Letter1 + "\n" + sameNum1Letter2 +
-                    "\n" + sameNum1Letter3 + "\n iii. номера разрядов \n" + "1,2,3");
-        } else if (sameNum1Letter1 == sameNum2Letter1 && sameNum1Letter2 == sameNum2Letter2) {
-            System.out.println("i.  исходные числа:\n" + sameNum1 + "\n" + sameNum2 +
-                    "\n ii. одинаковые в них цифры \n" + sameNum1Letter1 + "\n" + sameNum1Letter2 +
-                    "iii. номера разрядов \n" + "1,2");
-        } else if (sameNum1Letter1 == sameNum2Letter1 && sameNum1Letter3 == sameNum2Letter3) {
-            System.out.println("i.  исходные числа:\n" + sameNum1 + "\n" + sameNum2 +
-                    "\n ii. одинаковые в них цифры \n" + sameNum1Letter1 + "\n" + sameNum1Letter3 +
-                    "\n iii. номера разрядов \n" + "1,3");
-        } else if (sameNum1Letter2 == sameNum2Letter2 && sameNum1Letter3 == sameNum2Letter3) {
-            System.out.println("i.  исходные числа:\n" + sameNum1 + "\n" + sameNum2 +
-                    "\n ii. одинаковые в них цифры \n" + sameNum1Letter2 + "\n" + sameNum1Letter3 +
-                    "\n iii. номера разрядов \n" + "2,3");
-        } else if (sameNum1Letter1 == sameNum2Letter1) {
-            System.out.println("i.  исходные числа:\n" + sameNum1 + "\n" + sameNum2 +
-                    "\n ii. одинаковые в них цифры \n" + sameNum1Letter1+
-                    "\n iii. номера разрядов \n" + "1");
-        } else if (sameNum1Letter2 == sameNum2Letter2) {
-            System.out.println("i.  исходные числа:\n" + sameNum1 + "\n" + sameNum2 +
-                    "\n ii. одинаковые в них цифры \n" + sameNum1Letter2 +
-                    "iii. номера разрядов \n" + "2");
-        } else if (sameNum1Letter3 == sameNum2Letter3) {
-            System.out.println("i.  исходные числа:\n" + sameNum1 + "\n" + sameNum2 +
-                    "\n ii. одинаковые в них цифры \n" + sameNum1Letter3+
-                    "\n iii. номера разрядов \n" + "3");
+        System.out.println("i.  исходные числа:\n" + sameNum1 + "\n" + sameNum2);
+
+        if (sameNum1Letter1 == sameNum2Letter1) {
+            System.out.println(sameNum1Letter1 + " - одинаковое число" + "\nномер разряда - 1");
+        }
+
+        if (sameNum1Letter2 == sameNum2Letter2) {
+            System.out.println(sameNum1Letter2 + " - одинаковое число" + "\nномер разряда - 2");
+        }
+
+        if (sameNum1Letter3 == sameNum2Letter3) {
+            System.out.println(sameNum1Letter3 + " - одинаковое число" + "\nномер разряда - 3");
+        }
+
+        if (sameNum1Letter1 != sameNum2Letter1 && sameNum1Letter2 != sameNum2Letter2 &&
+                sameNum1Letter3 != sameNum2Letter3) {
+            System.out.println("одинаковых в них цифр нет");
         }
 
         System.out.println("\n 5.Определение символа по его коду");
-        char definingSymbol = '\u0057';
+        char someSymbol = '\u0057';
 
-        if (definingSymbol >= '0' && definingSymbol <= '9') {
-        System.out.println(definingSymbol + " является числом");
-        } else if (definingSymbol >= 'a' && definingSymbol <= 'z') {
-        System.out.println(definingSymbol + " является маленькой буквой");
-        } else if (definingSymbol >= 'A' && definingSymbol <= 'Z') {
-        System.out.println(definingSymbol + " является заглавной буквой");
-        } else 
-        System.out.println(definingSymbol + " не является ни буквой, ни числом");
+        if (someSymbol >= '0' && someSymbol <= '9') {
+            System.out.println(someSymbol + " является числом");
+        } else if (someSymbol >= 'a' && someSymbol <= 'z') {
+            System.out.println(someSymbol + " является маленькой буквой");
+        } else if (someSymbol >= 'A' && someSymbol <= 'Z') {
+            System.out.println(someSymbol + " является заглавной буквой");
+        } else {
+            System.out.println(someSymbol + " не является ни буквой, ни числом");
+        }
 
         System.out.println("\n 6.Подсчет суммы вклада и начисленных банком %");
-        int deposit = 300000;
+        int deposit = 100000;
         int percent;
 
         if (deposit < 100000) {
-        percent = 5;
+            percent = 5;
         } else if (deposit > 100000  && deposit <= 300000) {
-        percent = 7;
+            percent = 7;
         } else {
-        percent = 10;
+            percent = 10;
         }
 
         System.out.println("I. сумма вклада = " + deposit + "\nII. начисленный % = " + percent +
@@ -132,8 +125,8 @@ public class IfElseStatementTheme {
         System.out.println("\n 7.   Определение оценки по предметам");
         int historyPoints = 59;
         int programmingPoints = 91;
-        int historyGrade;
-        int programmingGrade;
+        int historyGrade = 3;
+        int programmingGrade = 5;
 
         if (historyPoints > 91) {
             historyGrade = 5;
@@ -160,14 +153,17 @@ public class IfElseStatementTheme {
                 ((historyGrade + programmingGrade) / 2) + "\n" + 
                 "Средний % - " + ((historyPoints + programmingPoints) / 2));
 
-
         System.out.println("\n 8.  Расчет прибыли за год");
         int officeRentPrice = 5000;
         int productPrice = 13000;
         int costPrice = 9000;
         int annualProfit = ((productPrice - costPrice) - officeRentPrice) * 12;
 
-        System.out.println("i.   прибыль за год:" + annualProfit);
+        if (annualProfit > 0) {
+            System.out.println("i.   прибыль за год:" + "+" + annualProfit);
+        } else {
+            System.out.println("i.   прибыль за год:" + annualProfit);
+        }
 
         System.out.println("\n 9.   Подсчет количества банкнот");
         int needfulmoney = 567;
@@ -201,5 +197,6 @@ public class IfElseStatementTheme {
                 " банкнот номиналом 10 \n" + usingones + " банкнот номиналом 1");
     }
 }
+
 
 
