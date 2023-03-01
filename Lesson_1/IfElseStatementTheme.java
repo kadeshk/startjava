@@ -46,14 +46,15 @@ public class IfElseStatementTheme {
             System.out.println("max является num2 = " + num2 + ", min является num1 = " + num1 );
         }
 
-    System.out.println("\n 3.Проверка числа");
+        System.out.println("\n 3.Проверка числа");
 
         int num = 8;
         System.out.println("Исходное число: " + num);
 
         if (num == 0) {
             System.out.println(" равно нулю");
-            else if (num % 2 == 0) {
+        } else {
+            if (num % 2 == 0) {
                 System.out.println(" является чётным");
             } else {
                 System.out.println(" является нечётным");
@@ -80,7 +81,7 @@ public class IfElseStatementTheme {
         if (num3Letter1 != num4Letter1 && num3Letter2 != num4Letter2 &&
                 num3Letter3 != num4Letter3) {
             System.out.println("одинаковых в них цифр нет");
-            } else {
+        } else {
             if (num3Letter1 == num4Letter1) {
                 System.out.println(num3Letter1 + " - одинаковое число" + "\nномер разряда - 1");
             }
@@ -112,7 +113,9 @@ public class IfElseStatementTheme {
         if (deposit > 100000  && deposit <= 300000) {
             percent = 7;
         } else {
+            if (deposit > 130000) {
             percent = 10;
+            }
         }
 
         System.out.println("I. сумма вклада = " + deposit + "\nII. начисленный % = " + percent +
@@ -174,13 +177,15 @@ public class IfElseStatementTheme {
         usingHundreds = needfulHundreds;
         usingTens = needfulTens;
         usingOnes = needfulOnes;
-        } else if (needfulHundreds <= availableHundreds && needfulTens <= availableTens && 
+        } else {
+            if (needfulHundreds <= availableHundreds && needfulTens <= availableTens && 
                     needfulOnes > availableOnes) {
         usingHundreds = needfulHundreds;
         usingTens = availableTens;
         usingOnes = needfulOnes + ((needfulTens - availableTens) * 10);
-        } else {
-        System.out.println ("требуемого количества банкнот нет");
+            } else {
+            System.out.println ("требуемого количества банкнот нет");
+            }
         }
 
         System.out.println ("i. номиналы банкнот: \n i. 10 банкнот номиналом 100" + 
