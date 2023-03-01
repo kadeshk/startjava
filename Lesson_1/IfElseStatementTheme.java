@@ -179,7 +179,7 @@ public class IfElseStatementTheme {
         usingOnes = needfulOnes;
         } else {
             if (needfulHundreds <= availableHundreds && needfulTens <= availableTens && 
-                    needfulOnes > availableOnes) {
+                        needfulOnes > availableOnes) {
         usingHundreds = needfulHundreds;
         usingTens = availableTens;
         usingOnes = needfulOnes + ((needfulTens - availableTens) * 10);
