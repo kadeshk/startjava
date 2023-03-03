@@ -112,10 +112,8 @@ public class IfElseStatementTheme {
 
         if (deposit > 100000  && deposit <= 300000) {
             percent = 7;
-        } else {
-            if (deposit > 130000) {
+        } else if (deposit > 130000) {
             percent = 10;
-            }
         }
 
         System.out.println("I. сумма вклада = " + deposit + "\nII. начисленный % = " + percent +
@@ -173,18 +171,18 @@ public class IfElseStatementTheme {
         int usingOnes;
 
         if (needfulHundreds <= availableHundreds && needfulTens <= availableTens && 
-                    needfulOnes <= availableOnes) {
-        usingHundreds = needfulHundreds;
-        usingTens = needfulTens;
-        usingOnes = needfulOnes;
+                needfulOnes <= availableOnes) {
+            usingHundreds = needfulHundreds;
+            usingTens = needfulTens;
+            usingOnes = needfulOnes;
         } else {
             if (needfulHundreds <= availableHundreds && needfulTens <= availableTens && 
-                        needfulOnes > availableOnes) {
-        usingHundreds = needfulHundreds;
-        usingTens = availableTens;
-        usingOnes = needfulOnes + ((needfulTens - availableTens) * 10);
+                    needfulOnes > availableOnes) {
+                usingHundreds = needfulHundreds;
+                usingTens = availableTens;
+                usingOnes = needfulOnes + ((needfulTens - availableTens) * 10);
             } else {
-            System.out.println ("требуемого количества банкнот нет");
+                System.out.println ("требуемого количества банкнот нет");
             }
         }
 
